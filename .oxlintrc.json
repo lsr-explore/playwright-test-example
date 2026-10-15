@@ -1,0 +1,7 @@
+{
+  "plugins": ["typescript", "react", "jsx-a11y"],
+  "categories": {
+    "correctness": "error"
+  },
+  "ignorePatterns": ["dist/**", "playwright-report/**", "test-results/**"]
+}

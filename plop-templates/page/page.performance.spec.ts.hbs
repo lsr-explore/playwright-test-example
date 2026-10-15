@@ -1,0 +1,6 @@
+import { test } from '@playwright/test';
+import { reportPerformance } from '../support/performance';
+test('report {{title}} performance', async ({ page, context }, testInfo) => {
+  await reportPerformance(page, context, testInfo, '/{{name}}', '{{title}}');
+});
+test.use({ trace: 'off', screenshot: 'off', video: 'off' });

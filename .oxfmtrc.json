@@ -1,0 +1,9 @@
+{
+  "ignorePatterns": [
+    "dist/**",
+    "playwright-report/**",
+    "test-results/**",
+    "pnpm-lock.yaml",
+    "plop-templates/**"
+  ]
+}

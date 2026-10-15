@@ -1,0 +1,11 @@
+import { render, screen, fireEvent } from '@testing-library/react';
+import { axe } from 'jest-axe';
+import { expect, test } from 'vitest';
+import { TravelFundPage } from './TravelFundPage';
+test('Travel Fund has no detectable accessibility violations', async () => {
+  const { container } = render(<main><TravelFundPage /></main>);
+  expect(await axe(container)).toHaveNoViolations();
+  fireEvent.click(screen.getByRole('button', { name: 'Toggle details' }));
+  expect(screen.getByText('Your new page is ready to customize.')).toBeVisible();
+  expect(await axe(container)).toHaveNoViolations();
+});

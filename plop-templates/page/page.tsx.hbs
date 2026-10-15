@@ -1,0 +1,11 @@
+import { useState } from 'react';
+export function {{componentName}}() {
+  const [showDetails, setShowDetails] = useState(false);
+  return <section aria-labelledby="{{name}}-heading">
+    <p className="eyebrow">EVERGREEN BANKING</p>
+    <h1 id="{{name}}-heading">{{title}}</h1>
+    <p>A fresh start for your next banking idea.</p>
+    <button type="button" data-testid="performance-action" aria-expanded={showDetails} aria-controls="{{name}}-details" onClick={() => setShowDetails((value) => !value)}>Toggle details</button>
+    <p id="{{name}}-details" hidden={!showDetails}>Your new page is ready to customize.</p>
+  </section>;
+}
