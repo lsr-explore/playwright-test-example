@@ -76,7 +76,7 @@ EXTERNAL_DASHBOARD_PATH=/dashboard
 `TARGET_URL` overrides the complete external dashboard URL, preserving the earlier behavior:
 
 ```sh
-TARGET_URL=https://demo.mercury.com/dashboard pnpm test:external
+TARGET_URL=https://personal-demo.mercury.com/dashboard pnpm test:external
 APP_BASE_URL=https://banking-staging.example.com pnpm test:e2e
 ```
 
